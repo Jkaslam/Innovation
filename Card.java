@@ -15,18 +15,26 @@ public class Card {
 	this.dogmaEffects = dogmaEffects; 
   }
   
+  public String getName() {
+    return name;
+  }
+  
   public Color getColor() {
     return color;
   }
   
-  public String getName() {
-    return name;
+  public int getAge() {
+    return age;
   }
   
   public void dogma() {
     for (Function f : dogmaEffects) {
 	  f.apply(this);
 	}
+  }
+  
+  public String toString() {
+    return "Age: " + string.valueOf(getAge()) + "Name: " + getName() + "Color: " + color.toString() + "\n";
   }
   
 }
