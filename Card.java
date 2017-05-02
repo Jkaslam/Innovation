@@ -3,11 +3,14 @@ import java.util.function.Function;
 public class Card {
   private String name;
   private Color color;
+  private int age; 
   private Symbol[] symbols;
   private Function[] dogmaEffects;
  
-  public Card(String name, Symbol[] symbols, Function[] dogmaEffects) {
+  public Card(String name, Color color, int age, Symbol[] symbols, Function[] dogmaEffects) {
     this.name = name;
+	this.color = color;
+	this.age = age;
 	this.symbols = symbols;
 	this.dogmaEffects = dogmaEffects; 
   }
