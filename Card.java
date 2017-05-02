@@ -7,9 +7,9 @@ public class Card {
   private Function[] dogmaEffects;
  
   public Card(String name, Symbol[] symbols, Function[] dogmaEffects) {
-    name = name;
-	symbols = symbols;
-	dogmaEffects = dogmaEffects; 
+    this.name = name;
+	this.symbols = symbols;
+	this.dogmaEffects = dogmaEffects; 
   }
   
   public Color getColor() {
