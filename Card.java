@@ -27,6 +27,10 @@ public class Card {
     return age;
   }
   
+  public Symbol[] getSymbols() {
+    return symbols;
+  }
+  
   public void dogma() {
     for (Function f : dogmaEffects) {
 	  f.apply(this);

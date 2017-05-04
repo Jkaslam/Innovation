@@ -27,6 +27,47 @@ public class Pile {
     cards.add(c);
   }
   
+  public int getNumSymbol(Symbol s) {
+    int sum = 0;
+    for (int ct = cards.size() - 1; ct >= 0; ct--) {
+	  cardSymbols = cards.get(i).getSymbols();
+	  if (ct == cards.size() - 1) {
+	    for (Symbol symb : cardSymbols) {
+		  if (s == symb) {
+		    sum++;
+		  }
+		}
+		if (splay == Splay.NONE) {
+		  return sum;
+		}
+	  }
+	  else {
+	    if (splay == Splay.LEFT) {
+		  if (s == cardSymbols[3]) {
+		    sum++;
+		  }
+		  return sum;
+		}
+		if (splay == Splay.RIGHT) {
+		  for (int i = 0; i < 2; i++) {
+		    if (s == cardSymbols[i]) {
+			  sum++;
+		    }
+		  }
+		  return sum;
+		}
+		if (splay == Splay.UP) {
+		  for (int i = 1; i < cards.size(); i++) {
+		    if (s == cardSymbols[i]) {
+			  sum++;
+			}
+		  }
+		  return sum;
+		}
+	  }
+	}
+  }
+  
   public void splayLeft() {
     splay = Splay.LEFT;
   }
