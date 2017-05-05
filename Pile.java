@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/*
+* Represents a pile of cards in front of a player in Innovation. Piles are separated by color. 
+*/ 
 public class Pile {
   private Color color;
   private Splay splay;
@@ -11,6 +14,7 @@ public class Pile {
 	cards = new ArrayList<Card>();
   }
   
+  //Returns the list of Cards in a pile
   public ArrayList<Card> getCards() {
     return cards;
   }
