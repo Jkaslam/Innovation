@@ -47,6 +47,16 @@ public class Card {
 	}
   }
   
+  //Checks if two cards are equal
+  public boolean equals(Card c) {
+    return name.equals(c.getName());
+  }
+  
+  //The hashvalue of the object
+  public int hashCode() {
+    return name.hashCode();
+  }
+  
   //Prints out the important information of the card
   public String toString() {
     return "Age: " + string.valueOf(getAge()) + "Name: " + getName() + "Color: " + color.toString() + "\n";
