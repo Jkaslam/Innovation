@@ -1,0 +1,76 @@
+import junit.framework.*;
+
+public class CardTest extends TestCase {
+    private Card card1, card2, card3;
+
+    public CardTest(String testName) {
+        super(testName);
+    }
+
+    protected void setUp() throws Exception {
+        super.setUp();
+        card1 = new Card("Mathematics", Color.BLUE, 2, {Symbol.NOTHING, Symbol.LIGHTBULB, Symbol.CROWN, Symbol.LIGHTBULB}, null);
+        card2 = new Card("Archery", Color.RED, 1, {Symbol.CASTLE, Symbol.LIGHTBULB, Symbol.NOTHING, Symbol.CASTLE}, null);
+        card3 = card1 = new Card("Mathematics", Color.BLUE, 2, {Symbol.NOTHING, Symbol.LIGHTBULB, Symbol.CROWN, Symbol.LIGHTBULB}, null);
+    }
+
+    //Tests the getName method
+    public void testGetName() {
+        assertNotNull(card1);
+        assertNotNull(card2);
+
+        assertEquals(card1.getName(), "Mathematics");
+        assertEquals(card2.getName(), "Archery");
+    }
+
+    //Tests the getColor method
+    public void testGetColor() {
+        assertNotNull(card1);
+        assertNotNull(card2);
+
+        assertEquals(card1.getColor(), Color.BLUE);
+        assertEquals(card2.getColor(), Color.RED);
+    }
+
+    //Tests the getAge method
+    public void testGetAge() {
+        assertNotNull(card1);
+        assertNotNull(card2);
+
+        assertEquals(card1.getAge(), 2);
+        assertEquals(card2.getAge(), 1);
+    }
+
+    //Tests the getSymbols method
+    public void testGetSymbols() {
+        assertNotNull(card1);
+        assertNotNull(card2);
+
+        assertEquals(card1.getSymbols(), {Symbol.NOTHING, Symbol.LIGHTBULB, Symbol.CROWN, Symbol.LIGHTBULB});
+        assertEquals(card2.getSymbols(), {Symbol.CASTLE, Symbol.LIGHTBULB, Symbol.NOTHING, Symbol.CASTLE});
+    }
+
+    //Tests the equals method
+    public void testEquals() {
+        assertNotNull(card1);
+        assertNotNull(card2);
+        assertNotNull(card3);
+
+        assertEquals(card1.equals(card3), true);
+        assertNotSame(card1.equals(card2), true);
+    }
+
+    //Tests the hashCode method
+    public void testHashCode() {
+        assertNotNull(card1);
+        assertNotNull(card2);
+        assertNotNull(card3);
+
+        assertEquals(card1.hashCode(), card3.hashCode());
+        assertNotSame(card1.hashCode(), card2.hashCode());
+    }
+
+
+
+
+}
